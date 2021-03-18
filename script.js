@@ -4,7 +4,8 @@ const outputLetter = document.getElementById('carta-gerada');
 
 function generateLetter() {
   newLetterButton.addEventListener('click', () => {
-    if (inputLetter.value === '' || inputLetter.value === null) {
+    if (inputLetter.value === '') {
+      outputLetter.innerHTML = '';
       outputLetter.innerHTML = 'Por favor, digite o conteúdo da carta.';
     } else {
       outputLetter.innerHTML = '';
