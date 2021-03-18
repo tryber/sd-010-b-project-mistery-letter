@@ -4,7 +4,9 @@ const outputLetter = document.getElementById('carta-gerada');
 
 function generateLetter() {
   newLetterButton.addEventListener('click', () => {
-    if (inputLetter.value !== '' || inputLetter === null) {
+    if (inputLetter.value === '' || inputLetter.value === null) {
+      outputLetter.innerHTML = 'Por favor, digite o conteúdo da carta.';
+    } else {
       outputLetter.innerHTML = '';
       const arrayString = inputLetter.value.split(' ');
       for (let index = 0; index < arrayString.length; index += 1) {
@@ -12,8 +14,6 @@ function generateLetter() {
         spanWord.innerHTML = `${arrayString[index]}`;
         outputLetter.appendChild(spanWord);
       }
-    } else {
-      outputLetter.innerHTML = 'Por favor, digite o conteúdo da carta.';
     }
   });
 }
