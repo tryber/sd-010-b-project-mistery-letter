@@ -12,7 +12,7 @@
   padding: 7px;
 }
 
-section input[ type = 'text' ] {
+.input {
   align-self: center;
   width: 60%;
   margin: 10px auto 0 150px;
