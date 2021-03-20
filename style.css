@@ -12,7 +12,7 @@
   padding: 7px;
 }
 
-input[ type = "text" ] {
+input[ type = 'text' ] {
   align-self: center;
   width: 60%;
   margin: 10px auto 0 150px;
@@ -30,7 +30,7 @@ input[ type = "text" ] {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Times New Roman, Times, serif;
   font-weight: 700;
 }
 
