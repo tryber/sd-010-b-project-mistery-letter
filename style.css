@@ -9,7 +9,7 @@
   align-self: center;
   width: 20%;
   margin: 10px auto 0 auto;
-  padding: 7px;  
+  padding: 7px;
 }
 
 input[type="text"] {
@@ -29,13 +29,13 @@ input[type="text"] {
 }
 
 .newspaper {
-  background-color:antiquewhite;
+  background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
 
 .magazine1 {
-  background-color:teal;
+  background-color: teal;
   color: white;
   font-family: Verdana, Tahoma, sans-serif;
   font-weight: 900;
@@ -45,7 +45,7 @@ input[type="text"] {
 .magazine2 {
   background-image: url('images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana, tahoma;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
 }
 
