@@ -1,6 +1,6 @@
 .content-line {
   width: 80%;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 0;
   padding: 7px;
   border: solid 1px black;
 }
@@ -8,11 +8,11 @@
 .content-line-self {
   align-self: center;
   width: 20%;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 0;
   padding: 7px;
 }
 
-input[type="text"] {
+input[ type = "text" ] {
   align-self: center;
   width: 60%;
   margin: 10px auto 0 150px;
