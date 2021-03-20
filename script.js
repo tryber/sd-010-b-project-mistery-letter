@@ -7,6 +7,7 @@ const paragrafo = document.getElementById('carta-gerada');
 function criarCarta() {
   btnGerar.addEventListener('click', function(event){
     paragrafo.appendChild(newSpan);
+    newSpan.innerHTML = input.value;
   });
 }
 criarCarta();
