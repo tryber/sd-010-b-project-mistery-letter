@@ -13,7 +13,10 @@ function criarCarta() {
     let frase = input.value;
     let arrInput = frase.split(' ');
     paragrafo.innerHTML = '';
-    verificaInput();
+    if (input.value == '') {
+      return para.innerHTML ='Por favor, digite o conteúdo da carta.';
+    } 
+    console.log('1');
     for (let i = 0; i < arrInput.length; i++) {
       let novoSpan = document.createElement('span');
       let classAleatorio = Math.floor(Math.random()*classesCarta.length);
