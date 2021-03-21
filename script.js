@@ -14,7 +14,7 @@ function criarCarta() {
     let arrInput = frase.split(' ');
     paragrafo.innerHTML = '';
     if (input.value == '') {
-      return para.innerText ='Por favor, digite o conteúdo da carta.';
+      return para.innerText = 'Por favor, digite o conteúdo da carta.';
     } 
     console.log('1');
     for (let i = 0; i < arrInput.length; i++) {
@@ -31,7 +31,7 @@ function criarCarta() {
 criarCarta();
 
 function verificaInput() {
-  if (input.value == '') {
+  if (input.value === '') {
     para.innerHTML ='Por favor, digite o conteúdo da carta.';
     return;
   }
