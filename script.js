@@ -11,6 +11,7 @@ function getInput() {
     } else {
       let geraTexto = inputTextCart.value;
       geraTexto = geraTexto.split(' ');
+      contadorLetras.innerText = geraTexto.length;
       for (let i = 0; i < geraTexto.length; i += 1) {
         const criarspan = document.createElement('span');
         criarspan.innerText = geraTexto[i];
