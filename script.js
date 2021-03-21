@@ -6,10 +6,17 @@ const paragrafo = document.getElementById('carta-gerada');
 
 function criarCarta() {
   btnGerar.addEventListener('click', function(event){
+    verificaInput();
     paragrafo.appendChild(newSpan);
     newSpan.innerHTML = input.value;
   });
 }
 criarCarta();
+
+function verificaInput() {
+  if (input.value == '') {
+    para.innerHTML ='Por favor, digite o conteúdo da carta';
+  }
+}
 
     
