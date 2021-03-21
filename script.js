@@ -12,8 +12,8 @@ function getInput() {
 }
 
 function checkVazio() {
-  if (inputTextCart.value === '' || inputTextCart === ' ' || inputTextCart === null) {
-    textoMisterioso.innerText = "Por favor, digite o conteúdo da carta.";
+  if (inputTextCart.value === '' || inputTextCart.value === ' ' || inputTextCart.value === null) {
+    textoMisterioso.innerText = 'Por favor, digite o conteúdo da carta.';
   }
 }
 
