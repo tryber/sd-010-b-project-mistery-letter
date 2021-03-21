@@ -13,7 +13,7 @@ function getInput() {
 
 function checkVazio() {
   if (inputTextCart.value === '' || inputTextCart === ' ' || inputTextCart === null) {
-    textoMisterioso.innerText = 'Por favor, digite o conteúdo da carta.';
+    textoMisterioso.innerText = "Por favor, digite o conteúdo da carta.";
   }
 }
 
