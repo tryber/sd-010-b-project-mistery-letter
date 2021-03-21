@@ -19,6 +19,4 @@ function checkVazio() {
 
 window.onload = () => {
   getInput();
-
-
 };
