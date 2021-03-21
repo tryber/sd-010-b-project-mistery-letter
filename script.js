@@ -1,4 +1,4 @@
-let novoSpan = document.createElement('span');
+
 const para = document.getElementById('carta-gerada');
 const input = document.getElementById('carta-texto');
 const btnGerar = document.getElementById('criar-carta');
@@ -11,12 +11,11 @@ function criarCarta() {
     let arrInput = frase.split(' ');
     verificaInput();
     for (let i = 0; i < arrInput.length; i++) {
-      let j = 0;
+      let novoSpan = document.createElement('span');
       let classAleatorio = Math.floor(Math.random()*classesCarta.length - 1);
       paragrafo.appendChild(novoSpan);
       novoSpan.innerHTML = arrInput[i];
       novoSpan.classList.add(classesCarta[classAleatorio]);
-      j++;
     }
   });
 }
