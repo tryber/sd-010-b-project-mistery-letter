@@ -12,12 +12,13 @@ function criarCarta() {
   btnGerar.addEventListener('click', function(){
     let frase = input.value;
     let arrInput = frase.split(' ');
+    paragrafo.innerHTML = '';
     verificaInput();
     for (let i = 0; i < arrInput.length; i++) {
       let novoSpan = document.createElement('span');
       let classAleatorio = Math.floor(Math.random()*classesCarta.length);
       paragrafo.appendChild(novoSpan);
-      novoSpan.innerHTML = arrInput[i] + ' ';
+      novoSpan.innerHTML = arrInput[i];
       novoSpan.classList.add(classesCarta[classAleatorio]);
     }  
     mudarClass();
@@ -28,7 +29,7 @@ criarCarta();
 
 function verificaInput() {
   if (input.value == '') {
-    para.innerHTML ='Por favor, digite o conteúdo da carta';
+    para.innerHTML ='por favor, digite o conteúdo da carta.';
   }
 }
 function mudarClass() {
