@@ -13,7 +13,7 @@ function criarCarta() {
     let frase = input.value;
     let arrInput = frase.split(' ');
     paragrafo.innerHTML = '';
-    if (input.value == '') {
+    if (input.value === '') {
       return para.innerText = 'Por favor, digite o conteúdo da carta.';
     } 
     console.log('1');
@@ -30,12 +30,6 @@ function criarCarta() {
 }
 criarCarta();
 
-function verificaInput() {
-  if (input.value === '') {
-    para.innerHTML ='Por favor, digite o conteúdo da carta.';
-    return;
-  }
-}
 function mudarClass() {
   spanClass = document.getElementsByTagName('span');
   for (let i = 0; i < spanClass.length; i++) {
