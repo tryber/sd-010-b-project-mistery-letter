@@ -24,10 +24,10 @@ const checkWhiteSpaces = () => {
 const inputCheck = () => {
   checkWhiteSpaces();
   if (textInput.value === '' || textInput.value === ' ') {
-    window.alert('Por favor, digite o conteúdo da carta.');
+    paiInputText.innerHTML = 'por favor, digite o conteúdo da carta.';
   }
   if (whitecount > 1 && textInput.value[0] === ' ') {
-    window.alert('Por favor, digite o conteúdo da carta.');
+    paiInputText.innerHTML = 'por favor, digite o conteúdo da carta.';
   }
   criarFrase();
 };
