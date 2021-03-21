@@ -14,8 +14,7 @@ function criarCarta() {
     paragrafo.innerHTML = '';
     if (input.value === '') {
       return paragrafo.innerText = 'por favor, digite o conteúdo da carta.';
-    } 
-    console.log('1');
+    }
     for (let i = 0; i < arrInput.length; i++) {
       let novoSpan = document.createElement('span');
       let classAleatorio = Math.floor(Math.random()*classesCarta.length);
@@ -24,7 +23,7 @@ function criarCarta() {
       novoSpan.classList.add(classesCarta[classAleatorio]);
     }  
     mudarClass();
-    // contaPalavras();
+    contaPalavras();
   });
 }
 
@@ -38,9 +37,11 @@ function mudarClass() {
     });
   }
 }
-// function contaPalavras() {
-//   contador.innerText = ;
-// }
+function contaPalavras() {
+  let frase = input.value;
+  let arrInput = frase.split(' ');
+  contador.innerHTML = arrInput.length;
+}
 window.onload = function (){
   criarCarta();
 }
