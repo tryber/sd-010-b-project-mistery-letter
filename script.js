@@ -13,7 +13,7 @@ function criarCarta() {
     let arrInput = frase.split(' ');
     paragrafo.innerHTML = '';
     if (input.value === '') {
-      return paragrafo.innerText = 'Por favor, digite o conteúdo da carta.';
+      return paragrafo.innerText = 'por favor, digite o conteúdo da carta.';
     } 
     console.log('1');
     for (let i = 0; i < arrInput.length; i++) {
