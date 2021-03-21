@@ -5,11 +5,17 @@ const contadorLetras = document.querySelector('#carta-contador');
 
 function getInput() {
   btnGeraCarta.addEventListener('click', () => {
-    const geraTexto = inputTextCart.value;
+    textoMisterioso.innerHTML = '';
     if (inputTextCart.value === '' || inputTextCart.value === ' ' || inputTextCart.value === null) {
       textoMisterioso.innerText = 'Por favor, digite o conteúdo da carta.';
     } else {
-      textoMisterioso.innerText = geraTexto;
+      let geraTexto = inputTextCart.value;
+      geraTexto = geraTexto.split(' ');
+      for (let i = 0; i < geraTexto.length; i += 1) {
+        const criarspan = document.createElement('span');
+        criarspan.innerText = geraTexto[i];
+        textoMisterioso.appendChild(criarspan);
+      }
     }
   });
 }
