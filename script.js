@@ -1,7 +1,7 @@
 const input = document.getElementById('carta-texto');
 const btnGerar = document.getElementById('criar-carta');
 const paragrafo = document.getElementById('carta-gerada');
-const contador = document.getElementById('conta-palavra');
+const contador = document.getElementById('carta-contador');
 let classesCarta = ['skewright', 'skewleft', 'rotateright', 'rotateleft', 'reallybig', 'big', 'medium', 'magazine2', 'magazine1', 'newspaper'];
 let classAleatorio = Math.floor(Math.random()*classesCarta.length);
 let spanClass;
