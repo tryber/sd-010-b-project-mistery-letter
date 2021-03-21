@@ -2,9 +2,11 @@ const para = document.getElementById('carta-gerada');
 const input = document.getElementById('carta-texto');
 const btnGerar = document.getElementById('criar-carta');
 const paragrafo = document.getElementById('carta-gerada');
+const contador = document.getElementById('conta-palavra');
 let classesCarta = ['skewright', 'skewleft', 'rotateright', 'rotateleft', 'reallybig', 'big', 'medium', 'magazine2', 'magazine1', 'newspaper'];
 let classAleatorio = Math.floor(Math.random()*classesCarta.length);
 let spanClass;
+
 
 function criarCarta() {
   btnGerar.addEventListener('click', function(){
@@ -19,6 +21,7 @@ function criarCarta() {
       novoSpan.classList.add(classesCarta[classAleatorio]);
     }  
     mudarClass();
+    // contaPalavras();
   });
 }
 criarCarta();
@@ -31,11 +34,13 @@ function verificaInput() {
 function mudarClass() {
   spanClass = document.getElementsByTagName('span');
   for (let i = 0; i < spanClass.length; i++) {
-  spanClass[i].addEventListener('click', function(event) {
-    let classAleatorio = Math.floor(Math.random()*classesCarta.length);
-    event.target.removeAttribute('class');
-    event.target.classList.add(classesCarta[classAleatorio]);
-    console.log('clicou');
-  });
+    spanClass[i].addEventListener('click', function(event) {
+      let classAleatorio = Math.floor(Math.random()*classesCarta.length);
+      event.target.removeAttribute('class');
+      event.target.classList.add(classesCarta[classAleatorio]);
+    });
+  }
 }
-}
+// function contaPalavras() {
+//   contador.innerText = ;
+// }
