@@ -1,4 +1,3 @@
-const para = document.getElementById('carta-gerada');
 const input = document.getElementById('carta-texto');
 const btnGerar = document.getElementById('criar-carta');
 const paragrafo = document.getElementById('carta-gerada');
@@ -14,7 +13,7 @@ function criarCarta() {
     let arrInput = frase.split(' ');
     paragrafo.innerHTML = '';
     if (input.value === '') {
-      return para.innerText = 'Por favor, digite o conteúdo da carta.';
+      return paragrafo.innerText = 'Por favor, digite o conteúdo da carta.';
     } 
     console.log('1');
     for (let i = 0; i < arrInput.length; i++) {
