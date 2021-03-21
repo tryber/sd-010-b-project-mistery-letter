@@ -29,7 +29,8 @@ criarCarta();
 
 function verificaInput() {
   if (input.value == '') {
-    para.innerHTML ='por favor, digite o conteúdo da carta.';
+    para.innerHTML ='Por favor, digite o conteúdo da carta.';
+    return;
   }
 }
 function mudarClass() {
