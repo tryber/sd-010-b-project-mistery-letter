@@ -28,7 +28,6 @@ function criarCarta() {
     // contaPalavras();
   });
 }
-criarCarta();
 
 function mudarClass() {
   spanClass = document.getElementsByTagName('span');
@@ -43,3 +42,6 @@ function mudarClass() {
 // function contaPalavras() {
 //   contador.innerText = ;
 // }
+window.onload = function (){
+  criarCarta();
+}
