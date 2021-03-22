@@ -13,8 +13,6 @@ const estilo = (createSpan) => {
   createSpan.classList.add(classesEstilo[random]);
 };
 
-
-
 const tamanho = (createSpan) => {
   const random = Math.floor(Math.random() * 3);
   createSpan.classList.add(classesTamanho[random]);
@@ -42,7 +40,6 @@ const criarFrase = () => {
     tamanho(createSpan);
     rotacao(createSpan);
     inclinacao(createSpan);
-    createSpan.classList.add('control');
     paiInputText.appendChild(createSpan);
   }
 };
@@ -84,7 +81,7 @@ const textCounterFunction = () => {
 
 const trocaEstiloAoClicar = () => {
   paiInputText.addEventListener('click', (event) => {
-    if (event.target.classList.contains('control')) {
+    if (event.target.style.marginTop === '10px') {
       const random = Math.floor(Math.random() * 3);
       event.target.classList.toggle(classesEstilo[random]);
       event.target.classList.toggle(classesTamanho[random]);
