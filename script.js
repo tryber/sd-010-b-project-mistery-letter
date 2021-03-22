@@ -3,6 +3,30 @@ const criarCartaBtn = document.querySelector('#criar-carta');
 const textInput = document.querySelector('#carta-texto');
 const textCounter = document.querySelector('#carta-contador');
 let whitecount = 0;
+const classesEstilo = ['newspaper', 'magazine1', 'magazine2'];
+const classesTamanho = ['medium', 'big', 'reallybig'];
+const classesRotacao = ['rotateleft', 'rotateright'];
+const classesInclinacao = ['skewleft', 'skewright'];
+
+const estilo = (createSpan) => {
+  const random = Math.floor(Math.random() * 3);
+  createSpan.classList.add(classesEstilo[random]);
+};
+
+const tamanho = (createSpan) => {
+  const random = Math.floor(Math.random() * 3);
+  createSpan.classList.add(classesTamanho[random]);
+};
+
+const rotacao = (createSpan) => {
+  const random = Math.floor(Math.random() * 2);
+  createSpan.classList.add(classesRotacao[random]);
+};
+
+const inclinacao = (createSpan) => {
+  const random = Math.floor(Math.random() * 2);
+  createSpan.classList.add(classesInclinacao[random]);
+};
 
 const criarFrase = () => {
   let text = textInput.value;
@@ -10,6 +34,12 @@ const criarFrase = () => {
   for (let index = 0; index < text.length; index += 1) {
     const createSpan = document.createElement('span');
     createSpan.innerHTML = text[index];
+    createSpan.style.marginLeft = '7px';
+    createSpan.style.marginTop = '10px';
+    estilo(createSpan);
+    tamanho(createSpan);
+    rotacao(createSpan);
+    inclinacao(createSpan);
     paiInputText.appendChild(createSpan);
   }
 };

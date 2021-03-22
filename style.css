@@ -35,6 +35,11 @@
   font-weight: 700;
 }
 
+#carta-gerada {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .magazine1 {
   background-color: teal;
   color: white;
