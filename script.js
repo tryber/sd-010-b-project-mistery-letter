@@ -13,6 +13,8 @@ const estilo = (createSpan) => {
   createSpan.classList.add(classesEstilo[random]);
 };
 
+
+
 const tamanho = (createSpan) => {
   const random = Math.floor(Math.random() * 3);
   createSpan.classList.add(classesTamanho[random]);
@@ -40,6 +42,7 @@ const criarFrase = () => {
     tamanho(createSpan);
     rotacao(createSpan);
     inclinacao(createSpan);
+    createSpan.classList.add('control');
     paiInputText.appendChild(createSpan);
   }
 };
@@ -79,7 +82,20 @@ const textCounterFunction = () => {
   });
 };
 
+const trocaEstiloAoClicar = () => {
+  paiInputText.addEventListener('click', (event) => {
+    if (event.target.classList.contains('control')) {
+      const random = Math.floor(Math.random() * 3);
+      event.target.classList.toggle(classesEstilo[random]);
+      event.target.classList.toggle(classesTamanho[random]);
+      event.target.classList.toggle(classesRotacao[random]);
+      event.target.classList.toggle(classesInclinacao[random]);
+    }
+  });
+};
+
 window.onload = () => {
   createBtnClick();
   textCounterFunction();
+  trocaEstiloAoClicar();
 };

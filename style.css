@@ -86,3 +86,6 @@
   transform: skewX(-10deg);
 }
 
+.control:hover {
+  cursor: pointer;
+}
