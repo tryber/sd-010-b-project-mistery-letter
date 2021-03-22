@@ -15,12 +15,32 @@ function getInput() {
       for (let i = 0; i < geraTexto.length; i += 1) {
         const criarspan = document.createElement('span');
         criarspan.innerText = geraTexto[i];
+        criarspan.classList.add(randomClasses());
+        criarspan.style.marginLeft = '9px';
         textoMisterioso.appendChild(criarspan);
       }
     }
   });
 }
 
+function randomClasses() {
+  const classes = [
+    'newspaper',
+    'magazine1',
+    'magazine2',
+    'medium',
+    'big',
+    'reallybig',
+    'rotateleft',
+    'rotateright',
+    'skewleft',
+    'skewright',
+  ];
+  const classesrandom = Math.floor(Math.random() * classes.length);
+  return classes[classesrandom];
+}
+
 window.onload = () => {
   getInput();
+  randomClasses();
 };
