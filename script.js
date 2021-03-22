@@ -27,7 +27,7 @@ function generateLetter() {
       outputLetter.innerText = 'Por favor, digite o conteúdo da carta.';
     } else {
       const arrayString = inputLetter.value.split(' ');
-      wordNumbers.innerText = `Número de palavras: ${arrayString.length}`;
+      wordNumbers.innerText = `${arrayString.length}`;
       for (let index = 0; index < arrayString.length; index += 1) {
         const spanWord = document.createElement('span');
         spanWord.innerHTML = `${arrayString[index]}`;
