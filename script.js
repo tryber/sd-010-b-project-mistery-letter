@@ -31,7 +31,7 @@ function criarCarta() {
     const frase = input.value;
     const arrInput = frase.split(' ');
     paragrafo.innerHTML = '';
-    if (input.value === '') {
+    if (frase.length === 0 || !frase.trim()) { // Referencia da função trim https://pt.stackoverflow.com/questions/58498/se-input-tiver-apenas-espa%C3%A7os-em-branco-n%C3%A3o-fazer-nada
       return digiteAlgo();
     }
     for (let i = 0; i < arrInput.length; i += 1) {
