@@ -2,46 +2,50 @@ const input = document.getElementById('carta-texto');
 const btnGerar = document.getElementById('criar-carta');
 const paragrafo = document.getElementById('carta-gerada');
 const contador = document.getElementById('carta-contador');
-let classesCarta = ['skewright', 'skewleft', 'rotateright', 'rotateleft', 'reallybig', 'big', 'medium', 'magazine2', 'magazine1', 'newspaper'];
-let classAleatorio = Math.floor(Math.random()*classesCarta.length);
-let spanClass;
+const classesCarta = ['skewright', 'skewleft', 'rotateright', 'rotateleft',
+  'reallybig', 'big', 'medium', 'magazine2', 'magazine1', 'newspaper'];
 
-
-function criarCarta() {
-  btnGerar.addEventListener('click', function(){
-    let frase = input.value;
-    let arrInput = frase.split(' ');
-    paragrafo.innerHTML = '';
-    if (input.value === '') {
-      return paragrafo.innerText = 'por favor, digite o conteúdo da carta.';
-    }
-    for (let i = 0; i < arrInput.length; i++) {
-      let novoSpan = document.createElement('span');
-      let classAleatorio = Math.floor(Math.random()*classesCarta.length);
-      paragrafo.appendChild(novoSpan);
-      novoSpan.innerHTML = arrInput[i];
-      novoSpan.classList.add(classesCarta[classAleatorio]);
-    }  
-    mudarClass();
-    contaPalavras();
-  });
+function digiteAlgo() {
+  paragrafo.innerText = 'por favor, digite o conteúdo da carta.';
 }
 
 function mudarClass() {
-  spanClass = document.getElementsByTagName('span');
-  for (let i = 0; i < spanClass.length; i++) {
-    spanClass[i].addEventListener('click', function(event) {
-      let classAleatorio = Math.floor(Math.random()*classesCarta.length);
+  const spanClass = document.getElementsByTagName('span');
+  for (let i = 0; i < spanClass.length; i += 1) {
+    spanClass[i].addEventListener('click', (event) => {
+      const classAleatorio = Math.floor(Math.random() * classesCarta.length);
       event.target.removeAttribute('class');
       event.target.classList.add(classesCarta[classAleatorio]);
     });
   }
 }
+
 function contaPalavras() {
-  let frase = input.value;
-  let arrInput = frase.split(' ');
-  contador.innerHTML = arrInput.length;
+  const frase = input.value;
+  const arrInput = frase.split(' ');
+  contador.innerHTML = `Quantidade de palavras ${arrInput.length}`;
 }
-window.onload = function (){
+
+function criarCarta() {
+  btnGerar.addEventListener('click', () => {
+    const frase = input.value;
+    const arrInput = frase.split(' ');
+    paragrafo.innerHTML = '';
+    if (input.value === '') {
+      return digiteAlgo();
+    }
+    for (let i = 0; i < arrInput.length; i += 1) {
+      const novoSpan = document.createElement('span');
+      const classAleatorio = Math.floor(Math.random() * classesCarta.length);
+      paragrafo.appendChild(novoSpan);
+      novoSpan.innerHTML = arrInput[i];
+      novoSpan.classList.add(classesCarta[classAleatorio]);
+    }
+    mudarClass();
+    contaPalavras();
+  });
+}
+
+window.onload = () => {
   criarCarta();
-}
+};
