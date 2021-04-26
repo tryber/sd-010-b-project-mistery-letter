@@ -23,7 +23,7 @@ function mudarClass() {
 function contaPalavras() {
   const frase = input.value;
   const arrInput = frase.split(' ');
-  contador.innerHTML = `Quantidade de palavras ${arrInput.length}`;
+  contador.innerHTML = arrInput.length;
 }
 
 function criarCarta() {
